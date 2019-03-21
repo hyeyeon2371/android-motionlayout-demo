@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.motion.MotionLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        app:showPaths="false"
+        app:layoutDescription="@xml/motion_scene"
+        android:background="@drawable/background">
+
+    <ImageView
+            android:src="@drawable/rocket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rocket"/>
+
+    <ImageView
+            android:layout_height="150dp" app:srcCompat="@drawable/cloud_left_half" android:id="@+id/cloud4"
+            android:layout_width="200dp" android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+            android:layout_height="200dp" app:srcCompat="@drawable/cloud_left" android:id="@+id/cloud1"
+            android:layout_width="300dp" tools:layout_editor_absoluteY="531dp" android:scaleType="fitXY"/>
+
+    <ImageView
+            android:layout_height="80dp" app:srcCompat="@drawable/cloud1" android:id="@+id/cloud5"
+            android:layout_width="130dp" android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="216dp"/>
+    <ImageView
+            android:layout_height="100dp" app:srcCompat="@drawable/cloud2" android:id="@+id/cloud6"
+            android:layout_width="150dp" android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="352dp" android:layout_marginEnd="28dp"/>
+    <ImageView
+            android:layout_height="150dp" app:srcCompat="@drawable/cloud_right_half" android:id="@+id/cloud3"
+            android:layout_width="200dp" android:scaleType="fitXY"
+            android:layout_marginBottom="44dp"      app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+            android:layout_height="200dp" app:srcCompat="@drawable/cloud_right" android:id="@+id/cloud2"
+            android:layout_width="300dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="1.0"
+            tools:layout_editor_absoluteY="190dp" android:scaleType="fitXY"/>
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp" app:srcCompat="@drawable/star" android:id="@+id/bigstar1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="36dp" app:layout_constraintTop_toTopOf="parent"
+    />
+    <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp" app:srcCompat="@drawable/star" android:id="@+id/bigstar2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="52dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="100dp"/>
+    <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp" app:srcCompat="@drawable/star" android:id="@+id/smallstar1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="88dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="88dp"/>
+    <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp" app:srcCompat="@drawable/star" android:id="@+id/smallstar2"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp" android:layout_marginEnd="32dp"/>
+    <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp" app:srcCompat="@drawable/star" android:id="@+id/smallstar4"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="36dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="128dp"/>
+    <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp" app:srcCompat="@drawable/star" android:id="@+id/smallstar3"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="76dp" android:layout_marginEnd="100dp"/>
+
+</android.support.constraint.motion.MotionLayout>

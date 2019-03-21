@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"  xmlns:motion="http://schemas.android.com/apk/res-auto">
+    <Transition
+            app:constraintSetStart="@id/start"
+            motion:duration="8000"
+            app:constraintSetEnd="@id/end">
+        <OnSwipe
+                app:touchAnchorId="@id/rocket"
+                app:touchAnchorSide="top"/>
+        <KeyFrameSet>
+            <!-- rocket -->
+            <KeyPosition
+                    app:keyPositionType="parentRelative"
+                    motion:target="@id/rocket"
+                    app:framePosition="20"
+                    app:percentX="0.7"
+                 />
+            <KeyPosition
+                    app:keyPositionType="parentRelative"
+                    motion:target="@id/rocket"
+                    app:framePosition="50"
+                    app:percentX="0.3"
+             />
+
+            <!-- cloud -->
+            <KeyPosition
+                    app:keyPositionType="pathRelative "
+                    motion:target="@id/cloud5"
+                    app:framePosition="50"
+                    app:percentX="-1"
+            />
+            <KeyPosition
+                    app:keyPositionType="pathRelative"
+                    motion:target="@id/cloud6"
+                    app:framePosition="50"
+                    app:percentX="0.2"
+            />
+
+            <!-- star -->
+            <KeyAttribute
+                    app:keyPositionType="parentRelative"
+                    motion:target="@id/smallstar1"
+                    app:framePosition="70"
+                   android:scaleX="3"
+                    android:scaleY="3"
+            />
+            <KeyAttribute
+                    app:keyPositionType="parentRelative"
+                    motion:target="@id/smallstar2"
+                    app:framePosition="70"
+                    android:scaleX="3"
+                    android:scaleY="3"
+            />
+            <KeyAttribute
+                    app:keyPositionType="parentRelative"
+                    motion:target="@id/smallstar3"
+                    app:framePosition="70"
+                    android:scaleX="2"
+                    android:scaleY="2"
+            />
+            <KeyAttribute
+                    app:keyPositionType="parentRelative"
+                    motion:target="@id/smallstar4"
+                    app:framePosition="70"
+                    android:scaleX="2"
+                    android:scaleY="2"
+            />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <!-- rocket -->
+        <Constraint
+                android:id="@id/rocket"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!-- cloud1 -->
+        <Constraint
+                android:id="@id/cloud1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <Constraint
+                android:id="@id/cloud2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <Constraint
+                android:id="@id/cloud3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="42dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+        />
+        <Constraint
+                android:id="@id/cloud4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="42dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+        <!-- cloud2 -->
+        <Constraint
+                android:id="@+id/cloud5"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="216dp" android:layout_marginStart="0dp"/>
+        <Constraint
+                android:id="@+id/cloud6"
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="300dp"
+                android:layout_marginEnd="0dp"/>
+
+        <!-- star -->
+        <Constraint
+                android:id="@id/bigstar1"
+                android:layout_width="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="36dp"/>
+        <Constraint
+                android:id="@id/bigstar2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="56dp"/>
+        <Constraint
+                android:id="@id/smallstar1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="88dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="88dp"/>
+        <Constraint
+                android:id="@id/smallstar4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="36dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="128dp"/>
+        <Constraint
+                android:id="@id/smallstar3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="76dp" android:layout_marginEnd="100dp"/>
+        <Constraint
+                android:id="@id/smallstar2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="32dp" android:layout_marginEnd="32dp"/>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <!-- rocket -->
+        <Constraint
+                android:id="@id/rocket"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+        />
+
+        <!-- cloud1 -->
+        <Constraint
+                android:id="@id/cloud1"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <Constraint
+                android:id="@id/cloud2"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <Constraint
+                android:id="@id/cloud3"
+                android:layout_width="200dp"
+                android:layout_marginBottom="42dp"
+                android:layout_height="150dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+        />
+        <Constraint
+                android:id="@id/cloud4"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="42dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+        <!-- cloud2 -->
+        <Constraint
+            android:id="@+id/cloud5"
+            android:layout_height="80dp"
+            android:layout_width="130dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="216dp" android:layout_marginStart="16dp"/>
+        <Constraint
+                android:id="@+id/cloud6"
+                android:layout_height="100dp"
+                android:layout_width="150dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="28dp"/>
+
+        <!-- star -->
+        <Constraint
+                android:id="@id/bigstar1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="40dp"
+                app:srcCompat="@drawable/star"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="36dp"/>
+        <Constraint
+                android:id="@id/bigstar2"
+                android:layout_width="20dp"
+                android:layout_height="20dp" app:srcCompat="@drawable/star"
+                android:layout_marginTop="100dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="42dp"/>
+        <Constraint
+                android:id="@id/smallstar1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="88dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="88dp"/>
+        <Constraint
+                android:id="@id/smallstar4"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="36dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="128dp"/>
+        <Constraint
+                android:id="@id/smallstar3"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="76dp" android:layout_marginEnd="100dp"/>
+        <Constraint
+                android:id="@id/smallstar2"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="32dp" android:layout_marginEnd="32dp"/>
+    </ConstraintSet>
+
+</MotionScene>
