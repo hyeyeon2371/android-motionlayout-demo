@@ -10,7 +10,6 @@
 /captures
 .externalNativeBuild
 
-# gradle files
-.gradle/
+.gradle
 /build
 
